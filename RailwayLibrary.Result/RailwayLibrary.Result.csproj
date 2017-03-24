@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyTitle>RailwayLibrary.Result</AssemblyTitle>
+    <VersionPrefix>0.0.0.1</VersionPrefix>
+    <Authors>MECLab limited</Authors>
+    <TargetFrameworks>netstandard1.6;net461</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>RailwayLibrary.Result</AssemblyName>
+    <PackageId>RailwayLibrary.Result</PackageId>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/MECLab/RailwayLibrary</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MECLab/RailwayLibrary</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/MECLab/RailwayLibrary/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
