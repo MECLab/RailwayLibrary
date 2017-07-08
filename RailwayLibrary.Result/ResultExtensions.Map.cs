@@ -17,15 +17,15 @@ namespace RailwayLibrary.Result
         public static Result<TSuccessOut, TError> Map<TSuccessIn, TSuccessOut, TError>(
             this Result<TSuccessIn, TError> result, Func<TSuccessIn, TSuccessOut> map)
         {
-            if (result.IsSuccess)
+            switch (result)
             {
-                var content = ((Success<TSuccessIn, TError>) result).Content;
-                var mapped = map(content);
-                return RailwayLibrary.Result.Result.Ok<TSuccessOut, TError>(mapped);
+                case Success<TSuccessIn, TError> succ:
+                    return Result.Ok<TSuccessOut, TError>(map(succ.Content));
+                case Failure<TError, TSuccessIn> err:
+                    return Result.Fail<TSuccessOut, TError>(err.Error);
+                default:
+                    throw new InvalidOperationException();
             }
-
-            var error = ((Failure<TError, TSuccessIn>) result).Error;
-            return RailwayLibrary.Result.Result.Fail<TSuccessOut, TError>(error);
         }
 
         /// <summary>
@@ -54,15 +54,15 @@ namespace RailwayLibrary.Result
             this Task<Result<TSuccessIn, TError>> task, Func<TSuccessIn, Task<TSuccessOut>> mapAsync)
         {
             var result = await task;
-            if (result.IsSuccess)
+            switch (result)
             {
-                var content = ((Success<TSuccessIn, TError>) result).Content;
-                var mapped = await mapAsync(content);
-                return RailwayLibrary.Result.Result.Ok<TSuccessOut, TError>(mapped);
+                case Success<TSuccessIn, TError> succ:
+                    return Result.Ok<TSuccessOut, TError>(await mapAsync(succ.Content));
+                case Failure<TError, TSuccessIn> err:
+                    return Result.Fail<TSuccessOut, TError>(err.Error);
+                default:
+                    throw new InvalidOperationException();
             }
-
-            var error = ((Failure<TError, TSuccessIn>) result).Error;
-            return RailwayLibrary.Result.Result.Fail<TSuccessOut, TError>(error);
         }
     }
 }

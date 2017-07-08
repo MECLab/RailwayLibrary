@@ -24,4 +24,8 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="ResultExtensions.OnError.cs" />
+  </ItemGroup>
+
 </Project>
