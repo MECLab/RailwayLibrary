@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <AssemblyTitle>RailwayLibrary.Option</AssemblyTitle>
-    <VersionPrefix>1.0.0.1</VersionPrefix>
+    <VersionPrefix>1.0.0.2</VersionPrefix>
     <Authors>MECLab limited</Authors>
     <TargetFrameworks>netstandard1.6;net461</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
