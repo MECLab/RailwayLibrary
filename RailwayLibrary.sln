@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DA014701-F151-4811-97B7-B077B331A98B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailwayLibrary.Result.Tests", "Tests\RailwayLibrary.Result.Tests\RailwayLibrary.Result.Tests.csproj", "{DBB57BDC-DC42-4AE4-875A-218BAEAF03DF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailwayLibrary.Option", "RailwayLibrary.Option\RailwayLibrary.Option.csproj", "{5FA33E01-144C-42FE-9E8A-285A216BB9DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailwayLibrary.Option", "Src\RailwayLibrary.Option\RailwayLibrary.Option.csproj", "{936F03C2-5798-4E3A-9604-E27E307D17B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailwayLibrary.Result", "RailwayLibrary.Result\RailwayLibrary.Result.csproj", "{5ECAD433-71A3-4E39-A806-C6456D92F440}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailwayLibrary.Result", "Src\RailwayLibrary.Result\RailwayLibrary.Result.csproj", "{E87CD329-7D35-4E02-8DB0-55493BDB5600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +21,14 @@ Global
 		{DBB57BDC-DC42-4AE4-875A-218BAEAF03DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBB57BDC-DC42-4AE4-875A-218BAEAF03DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBB57BDC-DC42-4AE4-875A-218BAEAF03DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FA33E01-144C-42FE-9E8A-285A216BB9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FA33E01-144C-42FE-9E8A-285A216BB9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FA33E01-144C-42FE-9E8A-285A216BB9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FA33E01-144C-42FE-9E8A-285A216BB9DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5ECAD433-71A3-4E39-A806-C6456D92F440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5ECAD433-71A3-4E39-A806-C6456D92F440}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5ECAD433-71A3-4E39-A806-C6456D92F440}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5ECAD433-71A3-4E39-A806-C6456D92F440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{936F03C2-5798-4E3A-9604-E27E307D17B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936F03C2-5798-4E3A-9604-E27E307D17B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936F03C2-5798-4E3A-9604-E27E307D17B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936F03C2-5798-4E3A-9604-E27E307D17B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E87CD329-7D35-4E02-8DB0-55493BDB5600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E87CD329-7D35-4E02-8DB0-55493BDB5600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E87CD329-7D35-4E02-8DB0-55493BDB5600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E87CD329-7D35-4E02-8DB0-55493BDB5600}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
