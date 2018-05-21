@@ -2,13 +2,12 @@
 
   <PropertyGroup>
     <AssemblyTitle>RailwayLibrary.Result</AssemblyTitle>
-    <VersionPrefix>1.0.0.2</VersionPrefix>
-    <Authors>MECLab limited</Authors>
-    <TargetFrameworks>netstandard1.6;net461</TargetFrameworks>
+    <VersionPrefix>1.0.0.3</VersionPrefix>
+    <Authors>Keagan Soakell-Ho</Authors>
+    <TargetFrameworks>netstandard1.6;net461;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>RailwayLibrary.Result</AssemblyName>
     <PackageId>RailwayLibrary.Result</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>

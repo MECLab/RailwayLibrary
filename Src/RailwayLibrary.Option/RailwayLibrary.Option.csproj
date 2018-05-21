@@ -2,13 +2,12 @@
 
   <PropertyGroup>
     <AssemblyTitle>RailwayLibrary.Option</AssemblyTitle>
-    <VersionPrefix>1.0.0.2</VersionPrefix>
-    <Authors>MECLab limited</Authors>
-    <TargetFrameworks>netstandard1.6;net461</TargetFrameworks>
+    <VersionPrefix>1.0.0.3</VersionPrefix>
+    <Authors>Keagan Soakell-Ho</Authors>
+    <TargetFrameworks>netstandard1.6;net461;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>RailwayLibrary.Option</AssemblyName>
     <PackageId>RailwayLibrary.Option</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
@@ -22,10 +21,6 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Net.Compilers" Version="2.0.1" />
   </ItemGroup>
 
 </Project>
