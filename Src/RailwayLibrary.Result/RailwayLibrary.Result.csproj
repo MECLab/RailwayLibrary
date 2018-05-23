@@ -2,12 +2,15 @@
 
   <PropertyGroup>
     <AssemblyTitle>RailwayLibrary.Result</AssemblyTitle>
-    <VersionPrefix>1.0.0.3</VersionPrefix>
+    <VersionPrefix>1.0.0.4</VersionPrefix>
     <Authors>Keagan Soakell-Ho</Authors>
     <TargetFrameworks>netstandard1.6;net461;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>RailwayLibrary.Result</AssemblyName>
     <PackageId>RailwayLibrary.Result</PackageId>
+    <Description>
+      Railway Oriented Programming (ROP) libray that attempts to stay true to the .net style domain language.
+    </Description>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>

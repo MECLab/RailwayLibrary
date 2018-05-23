@@ -17,7 +17,7 @@ namespace RailwayLibrary.Result
         /// <remarks>Also known as FlatMap or Bind.</remarks>
         public static Result<TSuccessOut, TError> OnSuccess<TSuccessIn, TError, TSuccessOut>(
             this Result<TSuccessIn, TError> result, Func<TSuccessIn, Result<TSuccessOut, TError>> onSuccess) =>
-                result.Reduce(onSuccess, RailwayLibrary.Result.Result.Fail<TSuccessOut, TError>);
+                result.Reduce(onSuccess, Result.Fail<TSuccessOut, TError>);
 
         /// <summary>
         /// Executes the <paramref name="onSuccess"/> function only if the async <paramref name="task"/> results in an instance of <see cref="Success{TSuccess,TError}"/>;
@@ -45,6 +45,36 @@ namespace RailwayLibrary.Result
         /// <remarks>Also known as FlatMap or Bind.</remarks>
         public static Task<Result<TSuccessOut, TError>> OnSuccessAsync<TSuccessIn, TError, TSuccessOut>(
             this Task<Result<TSuccessIn, TError>> task, Func<TSuccessIn, Task<Result<TSuccessOut, TError>>> onSuccessAsync) =>
-                task.ReduceAsync(onSuccessAsync, err => Task.FromResult(RailwayLibrary.Result.Result.Fail<TSuccessOut, TError>(err)));
+                task.ReduceAsync(onSuccessAsync, err => Task.FromResult(Result.Fail<TSuccessOut, TError>(err)));
+
+        /// <summary>
+        /// Try and execute the <paramref name="tryFunc"/> if the <paramref name="result"/> is an instance of <see cref="Success{TSuccess, TError}"/>
+        /// </summary>
+        /// <typeparam name="TSuccessIn">The input Success type</typeparam>
+        /// <typeparam name="TSuccessOut">The output success type</typeparam>
+        /// <param name="result">the <see cref="Result{TSuccess, TError}"/> instance</param>
+        /// <param name="tryFunc">The function that will be executed and may throw an <see cref="Exception"/></param>
+        public static Result<TSuccessOut, Exception> OnSuccessThenTry<TSuccessIn, TSuccessOut>(this Result<TSuccessIn, Exception> result, Func<TSuccessIn, TSuccessOut> tryFunc) =>
+            result.OnSuccess(param => Result.Try(() => tryFunc(param)));
+
+        /// <summary>
+        /// Try and execute the <paramref name="tryFunc"/> if the asynchronous <paramref name="resultAsync"/> is an instance of <see cref="Success{TSuccess, TError}"/>
+        /// </summary>
+        /// <typeparam name="TSuccessIn">The input Success type</typeparam>
+        /// <typeparam name="TSuccessOut">The output success type</typeparam>
+        /// <param name="resultAsync">the asynchronous <see cref="Result{TSuccess, TError}"/></param>
+        /// <param name="tryFunc">The function that will be executed and may throw an <see cref="Exception"/></param>
+        public static Task<Result<TSuccessOut, Exception>> OnSuccessThenTry<TSuccessIn, TSuccessOut>(this Task<Result<TSuccessIn, Exception>> resultAsync, Func<TSuccessIn, TSuccessOut> tryFunc) =>
+            resultAsync.OnSuccess(param => Result.Try(() => tryFunc(param)));
+
+        /// <summary>
+        /// Try and execute the <paramref name="tryAsyncFunc"/> if the asynchronous <paramref name="resultAsync"/> resolves as an instance of <see cref="Success{TSuccess, TError}"/>
+        /// </summary>
+        /// <typeparam name="TSuccessIn">The input Success type</typeparam>
+        /// <typeparam name="TSuccessOut">The output success type</typeparam>
+        /// <param name="resultAsync">the asynchronous <see cref="Result{TSuccess, TError}"/></param>
+        /// <param name="tryAsyncFunc">The asynchronous function that will be executed and may throw an <see cref="Exception"/></param>
+        public static Task<Result<TSuccessOut, Exception>> OnSuccessThenTryAsync<TSuccessIn, TSuccessOut>(this Task<Result<TSuccessIn, Exception>> resultAsync, Func<TSuccessIn, Task<TSuccessOut>> tryAsyncFunc) =>
+            resultAsync.OnSuccessAsync(param => Result.TryAsync(() => tryAsyncFunc(param)));
     }
 }
