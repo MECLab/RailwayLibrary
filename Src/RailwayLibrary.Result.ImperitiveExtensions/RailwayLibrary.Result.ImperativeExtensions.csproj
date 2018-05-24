@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyTitle>RailwayLibrary.Result.ImerativeExtensions</AssemblyTitle>
+    <AssemblyTitle>RailwayLibrary.Result.ImperativeExtensions</AssemblyTitle>
     <VersionPrefix>1.0.0.5</VersionPrefix>
     <Authors>Keagan Soakell-Ho</Authors>
     <TargetFrameworks>netstandard1.6;net461;net45</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AssemblyName>RailwayLibrary.Result.ImerativeExtensions</AssemblyName>
-    <PackageId>RailwayLibrary.Result.ImerativeExtensions</PackageId>
+    <AssemblyName>RailwayLibrary.Result.ImperativeExtensions</AssemblyName>
+    <PackageId>RailwayLibrary.Result.ImperativeExtensions</PackageId>
     <Description>
       RailwayLibrary helper extension functions for an imperative friendly API.
     </Description>
